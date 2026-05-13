@@ -3,7 +3,7 @@ Floyd-Warshall je robustní algoritmus z oblasti **dynamického programování**
 
 ---
 
-###  1. Základní charakteristika
+###  1. Základ
 
 - **Hlavní účel:** Nalezení nejkratších cest mezi **všemi dvojicemi vrcholů**.
 - **Typ grafu:** Pracuje na **orientovaných** i **neorientovaných** grafech.
@@ -12,7 +12,7 @@ Floyd-Warshall je robustní algoritmus z oblasti **dynamického programování**
 
 ---
 
-### 2. Matematický princip
+### 2. Matematika
 
 Algoritmus postupně vylepšuje odhad vzdálenosti mezi vrcholy $i$ a $j$ tím, že zvažuje průchod přes pomocný vrchol $k$.
 
@@ -27,7 +27,7 @@ Algoritmus postupně vylepšuje odhad vzdálenosti mezi vrcholy $i$ a $j$ tím, 
 
 ---
 
-###  3. Analýza složitosti
+###  3. Složitost
 
 Vzhledem ke třem vnořeným cyklům je složitost algoritmu predikovatelná a nezávislá na počtu hran ($E$).
 
@@ -64,10 +64,42 @@ for (int k = 0; k < V; k++) {
     printMatrix(dist, V); // Pomocná metoda pro výpis stavu
 }
 ```
-
+### 4.1. Výsledek 
+```
+Original Adjacency Matrix:
+0   5   INF 10   
+INF 0   3   INF 
+INF INF 0   1   
+INF INF INF 0   
+---------------------------
+Iteration 1: Using vertex 0 as intermediate.
+0   5   INF 10   
+INF 0   3   INF 
+INF INF 0   1   
+INF INF INF 0   
+---------------------------
+Iteration 2: Using vertex 1 as intermediate.
+0   5   8   10   
+INF 0   3   INF 
+INF INF 0   1   
+INF INF INF 0   
+---------------------------
+Iteration 3: Using vertex 2 as intermediate.
+0   5   8   9   
+INF 0   3   4   
+INF INF 0   1   
+INF INF INF 0   
+---------------------------
+Iteration 4: Using vertex 3 as intermediate.
+0   5   8   9   
+INF 0   3   4   
+INF INF 0   1   
+INF INF INF 0   
+---------------------------
+```
 ---
 
-###  5. Detekce záporných cyklů
+###  5. Záporné cykly
 
 Záporný cyklus způsobuje, že nejkratší cesta neexistuje (lze ji zmenšovat do nekonečna). Floyd-Warshall tento problém odhalí snadno:
 
@@ -76,7 +108,7 @@ Záporný cyklus způsobuje, že nejkratší cesta neexistuje (lze ji zmenšovat
 
 ---
 
-###  6. Praktické využití
+###  6. Využití
 
 1. **Směrování v sítích:** Výpočet optimálních cest v IP sítích.
 2. **Dopravní plánování:** Matice vzdáleností mezi všemi městy v navigacích.
@@ -85,6 +117,6 @@ Záporný cyklus způsobuje, že nejkratší cesta neexistuje (lze ji zmenšovat
 
 ---
 
-###  Externí zdroje
+###  Git
 
--  **Repozitář projektu:** [Github - ALG Floyd-Warshall](https://github.com/M4rtewh/ALG---Floyd-Warshall-v/tree/master)
+#### **Repozitář projektu:** [Github - ALG Floyd-Warshall](https://github.com/M4rtewh/ALG---Floyd-Warshall-v/tree/master)
