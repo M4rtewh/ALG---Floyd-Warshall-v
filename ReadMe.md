@@ -29,7 +29,7 @@ Algoritmus postupně vylepšuje odhad vzdálenosti mezi vrcholy $i$ a $j$ tím, 
 
 ###  3. Složitost
 
-Vzhledem ke třem vnořeným cyklům je složitost algoritmu predikovatelná a nezávislá na počtu hran ($E$).
+Vzhledem ke třem vnořeným cyklům je složitost algoritmu predikovatelná a nezávislá na počtu hran.
 
 |**Typ složitosti**|**Zápis**|**Popis**|
 |---|---|---|
